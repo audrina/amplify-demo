@@ -1,0 +1,6 @@
+type Proposal @model {
+  id: ID!
+  name: String!
+  description: String
+  votes: Int!
+}
