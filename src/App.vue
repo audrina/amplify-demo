@@ -36,23 +36,23 @@ export default {
       proposalColors: ["red", "pink", "purple", "indigo"]
     };
   },
-  //---------------------------------- auth ---------------------
-    async beforeCreate() {
-    try {
-      const user = await Auth.currentAuthenticatedUser()
-      this.signedIn = true
-    } catch (err) {
-      this.signedIn = false
-    }
-    AmplifyEventBus.$on('authState', info => {
-      if (info === 'signedIn') {
-        this.signedIn = true
-      } else {
-        this.signedIn = false
-      }
-    });
-  },
-  //---------------------------------- auth ---------------------
+  // //---------------------------------- auth ---------------------
+  //   async beforeCreate() {
+  //   try {
+  //     const user = await Auth.currentAuthenticatedUser()
+  //     this.signedIn = true
+  //   } catch (err) {
+  //     this.signedIn = false
+  //   }
+  //   AmplifyEventBus.$on('authState', info => {
+  //     if (info === 'signedIn') {
+  //       this.signedIn = true
+  //     } else {
+  //       this.signedIn = false
+  //     }
+  //   });
+  // },
+  // //---------------------------------- auth ---------------------
   computed: {
     chartData: function() {
       return {
