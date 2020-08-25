@@ -25,8 +25,8 @@ import { API, graphqlOperation } from "aws-amplify";
 import * as queries from "./graphql/queries";
 import * as mutations from "./graphql/mutations";
 import * as subscriptions from "./graphql/subscriptions";
-import { AmplifyEventBus } from 'aws-amplify-vue'
-import { Auth } from 'aws-amplify'
+// import { AmplifyEventBus } from 'aws-amplify-vue'
+// import { Auth } from 'aws-amplify'
 
 export default {
   components: { VoteChart },
