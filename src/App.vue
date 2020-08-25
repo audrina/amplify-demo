@@ -1,4 +1,5 @@
 <template>
+  <amplify-authenticator>
   <div id="app">
     <div class="text-gray-800 md:text-lg italic font-light">Which fundraiser proposal do you like best?</div>
     <div class="mx-auto flex mt-4">
@@ -10,6 +11,8 @@
     <h1 class="text-gray-800 font-bold mt-8 mb-3">Live updates</h1>
     <VoteChart v-bind:chartData="chartData" width="200" height="110"></VoteChart>
   </div>
+  <amplify-sign-out></amplify-sign-out>
+  </amplify-authenticator>
 </template>
 
 <script>
@@ -34,7 +37,7 @@ export default {
         datasets: [{
             label: false,
             data: this.proposals.map(proposal => proposal.votes),
-            backgroundColor: ["#e53e3e", "#dd6b20", "#38a169", "#3182ce"]
+            backgroundColor: ["red", "pink", "purple", "indigo"]
           }]};
     }
   },
