@@ -10,6 +10,11 @@
             "StackName": "amplify-octank-dev-170704",
             "StackId": "arn:aws:cloudformation:ca-central-1:661067740855:stack/amplify-octank-dev-170704/12210ba0-e563-11ea-a434-02cf8a56c1ca",
             "AmplifyAppId": "dd0fif4is7a3c"
+        },
+        "categories": {
+            "auth": {
+                "octanke0081b72": {}
+            }
         }
     }
 }
