@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       proposals: [],
-      proposalColors: ["red", "pink", "purple", "indigo", "red", "pink", "purple", "indigo"]
+      proposalColors: ["red", "pink", "purple", "indigo"]
     };
   },
   // //---------------------------------- auth ---------------------
@@ -58,7 +58,7 @@ export default {
         datasets: [{
             label: false,
             data: this.proposals.map(proposal => proposal.votes),
-            backgroundColor: ["red", "pink", "purple", "indigo", "red", "pink", "purple", "indigo"]
+            backgroundColor: ["red", "pink", "purple", "indigo"]
           }]};
     }
   },
