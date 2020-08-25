@@ -1,6 +1,18 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const castVote = /* GraphQL */ `
+  mutation CastVote($input: CastVoteInput!) {
+    castVote(input: $input) {
+      id
+      name
+      description
+      votes
+      createdAt
+      updatedAt
+    }
+  }
+`;
 export const createProposal = /* GraphQL */ `
   mutation CreateProposal(
     $input: CreateProposalInput!
