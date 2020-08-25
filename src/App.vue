@@ -1,5 +1,4 @@
 <template>
-
   <div id="app">
     <div v-if="!signedIn">
      <amplify-authenticator></amplify-authenticator>
@@ -26,6 +25,8 @@ import { API, graphqlOperation } from "aws-amplify";
 import * as queries from "./graphql/queries";
 import * as mutations from "./graphql/mutations";
 import * as subscriptions from "./graphql/subscriptions";
+import { AmplifyEventBus } from 'aws-amplify-vue'
+import { Auth } from 'aws-amplify'
 
 export default {
   components: { VoteChart },
@@ -35,6 +36,23 @@ export default {
       proposalColors: ["red", "pink", "purple", "indigo"]
     };
   },
+  //---------------------------------- auth ---------------------
+    async beforeCreate() {
+    try {
+      const user = await Auth.currentAuthenticatedUser()
+      this.signedIn = true
+    } catch (err) {
+      this.signedIn = false
+    }
+    AmplifyEventBus.$on('authState', info => {
+      if (info === 'signedIn') {
+        this.signedIn = true
+      } else {
+        this.signedIn = false
+      }
+    });
+  },
+  //---------------------------------- auth ---------------------
   computed: {
     chartData: function() {
       return {
