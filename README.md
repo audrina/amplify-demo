@@ -1,4 +1,4 @@
-# octank
+# Octank Fundrasing: new beta voting platform
 
 ## Project setup
 ```
